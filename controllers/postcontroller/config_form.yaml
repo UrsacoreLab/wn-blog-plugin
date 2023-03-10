@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: 'ursacorelab.blog::lang.controller.post.label'
+
+# Model Form Field configuration
+form: $/ursacorelab/blog/models/post/fields.yaml
+
+# Model Class name
+modelClass: UrsacoreLab\Blog\Models\Post
+
+# Default redirect location
+defaultRedirect: UrsacoreLab/Blog/PostController
+
+# Create page
+create:
+    title: ursacorelab.blog::lang.controller.post.create
+    redirect: UrsacoreLab/Blog/PostController/update/:id
+    redirectClose: UrsacoreLab/Blog/PostController
+
+# Update page
+update:
+    title: ursacorelab.blog::lang.controller.post.update
+    redirect: UrsacoreLab/Blog/PostController
+    redirectClose: UrsacoreLab/Blog/PostController
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

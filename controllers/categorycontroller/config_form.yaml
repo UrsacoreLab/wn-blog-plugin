@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: 'ursacorelab.blog::lang.controller.category.label'
+
+# Model Form Field configuration
+form: $/ursacorelab/blog/models/category/fields.yaml
+
+# Model Class name
+modelClass: UrsacoreLab\Blog\Models\Category
+
+# Default redirect location
+defaultRedirect: UrsacoreLab/Blog/CategoryController
+
+# Create page
+create:
+    title: ursacorelab.blog::lang.controller.category.create
+    redirect: UrsacoreLab/Blog/CategoryController/update/:id
+    redirectClose: UrsacoreLab/Blog/CategoryController
+
+# Update page
+update:
+    title: ursacorelab.blog::lang.controller.category.update
+    redirect: UrsacoreLab/Blog/CategoryController
+    redirectClose: UrsacoreLab/Blog/CategoryController
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

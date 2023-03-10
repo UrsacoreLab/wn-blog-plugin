@@ -1,0 +1,31 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: "ursacorelab.blog::lang.model.name"
+        span: storm
+        cssClass: col-sm-12 col-md-6
+
+    slug:
+        label: "ursacorelab.blog::lang.model.slug"
+        preset: name
+        span: storm
+        cssClass: col-sm-12 col-md-6
+
+    keywords:
+        label: "ursacorelab.blog::lang.model.keywords"
+        span: storm
+        cssClass: col-sm-12 col-md-12
+
+secondaryTabs:
+    cssClass: 'ursacorelab_secondary_tabs'
+
+    fields:
+        status:
+            label: "ursacorelab.blog::lang.model.status"
+            type: dropdown
+            default: 110
+            span: storm
+            cssClass: col-sm-12 col-md-12

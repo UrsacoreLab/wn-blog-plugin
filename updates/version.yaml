@@ -1,0 +1,4 @@
+'1.0.0':
+    - 'First version of UrsacoreLab.Blog'
+    - 1.0.0/create_blog_categories_table.php
+    - 1.0.0/create_blog_posts_table.php

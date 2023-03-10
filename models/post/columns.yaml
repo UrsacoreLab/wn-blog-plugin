@@ -1,0 +1,46 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: 'ursacorelab.blog::lang.model.id'
+        searchable: true
+
+    category:
+        label: 'ursacorelab.blog::lang.model.category_id'
+        searchable: true
+
+    name:
+        label: 'ursacorelab.blog::lang.model.name'
+        searchable: true
+
+    title:
+        label: 'ursacorelab.blog::lang.model.title'
+        searchable: true
+
+    slug:
+        label: 'ursacorelab.blog::lang.model.slug'
+        searchable: true
+
+    status:
+        label: 'ursacorelab.blog::lang.model.status'
+        type: partial
+        path: ~/plugins/ursacorelab/staticvars/partials/_status.htm
+        searchable: true
+
+    image:
+        label: "ursacorelab.blog::lang.model.image"
+        type: image
+
+    created_at:
+        label: 'ursacorelab.blog::lang.model.created_at'
+        type: datetime
+        searchable: true
+        sortable: true
+
+    updated_at:
+        label: 'ursacorelab.blog::lang.model.updated_at'
+        type: datetime
+        searchable: true
+        sortable: true

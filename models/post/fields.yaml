@@ -1,0 +1,67 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: 'ursacorelab.blog::lang.model.name'
+        span: storm
+        cssClass: col-sm-12 col-md-6
+
+    title:
+        label: 'ursacorelab.blog::lang.model.title'
+        preset:
+            field: name
+            type: exact
+        span: storm
+        cssClass: col-sm-12 col-md-6
+
+    slug:
+        label: 'ursacorelab.blog::lang.model.slug'
+        preset: name
+        span: storm
+        cssClass: col-sm-12 col-md-6
+
+    keywords:
+        label: 'ursacorelab.blog::lang.model.keywords'
+        span: storm
+        cssClass: col-sm-12 col-md-6
+
+    introductory:
+        label: 'ursacorelab.blog::lang.model.introductory'
+        type: richeditor
+        size: huge
+        span: storm
+        cssClass: col-sm-12 col-md-12
+
+    content:
+        label: 'ursacorelab.blog::lang.model.content'
+        type: richeditor
+        size: giant
+        span: storm
+        cssClass: col-sm-12 col-md-12
+
+secondaryTabs:
+    cssClass: 'ursacorelab_secondary_tabs'
+
+    fields:
+        category_id:
+            label: 'ursacorelab.blog::lang.model.category_id'
+            type: dropdown
+            span: storm
+            cssClass: col-sm-12 col-md-12
+
+        status:
+            label: 'ursacorelab.blog::lang.model.status'
+            type: dropdown
+            default: 110
+            span: storm
+            cssClass: col-sm-12 col-md-12
+
+        image:
+            label: "ursacorelab.blog::lang.model.image"
+            type: fileupload
+            mode: image
+            imageWidth: 150
+            span: storm
+            cssClass: col-sm-12 col-md-12
