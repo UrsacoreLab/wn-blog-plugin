@@ -48,10 +48,10 @@ class CategoryController extends Controller
             );
     }
 
-    public function category_single($id): CategoryResource|array
+    public function category_single($slug): CategoryResource|array
     {
         $data = Category::query()
-            ->where('id', $id)
+            ->where('slug', $slug)
             ->where('status', Statuses::ACTIVE)
             ->first();
 
