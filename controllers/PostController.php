@@ -36,7 +36,7 @@ class PostController extends Controller
         $data = Post::query()
             ->where('status', Statuses::ACTIVE)
             ->orderBy('created_at', 'desc')
-            ->get();
+            ->paginate(10);
 
         return PostResource::collection($data)
             ->additional(
