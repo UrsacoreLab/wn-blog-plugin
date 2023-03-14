@@ -5,6 +5,7 @@ namespace UrsacoreLab\Blog;
 use Backend\Facades\Backend;
 use Backend\Models\UserRole;
 use System\Classes\PluginBase;
+use UrsacoreLab\Blog\Models\BlogSettings;
 
 class Plugin extends PluginBase
 {
@@ -68,6 +69,22 @@ class Plugin extends PluginBase
                         'order'       => 500,
                     ],
                 ],
+            ],
+        ];
+    }
+
+    public function registerSettings(): array
+    {
+        return [
+            'value' => [
+                'label'       => 'ursacorelab.blog::lang.plugin.name',
+                'description' => 'ursacorelab.blog::lang.plugin.description',
+                'category'    => 'UrsacoreLab',
+                'icon'        => 'icon-cogs',
+                'class'       => BlogSettings::class,
+                'order'       => 500,
+                'keywords'    => '',
+                'permissions' => ['ursacorelab.blog.access'],
             ],
         ];
     }

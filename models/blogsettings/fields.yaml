@@ -1,0 +1,12 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    additional_parameter_show_for_list:
+        label: ursacorelab.blog::lang.settings.additional_parameter_show_for_list
+        type: switch
+
+    additional_parameter_show_for_single:
+        label: ursacorelab.blog::lang.settings.additional_parameter_show_for_single
+        type: switch
