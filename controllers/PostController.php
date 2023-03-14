@@ -5,6 +5,7 @@ namespace UrsacoreLab\Blog\Controllers;
 use Backend\Classes\Controller;
 use Backend\Facades\BackendMenu;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
+use UrsacoreLab\Blog\Models\BlogSettings;
 use UrsacoreLab\Blog\Models\Post;
 use UrsacoreLab\Blog\Resources\PostResource;
 use UrsacoreLab\StaticVars\Classes\Additional;
@@ -12,7 +13,9 @@ use UrsacoreLab\StaticVars\Classes\Statuses;
 
 class PostController extends Controller
 {
-    protected bool $debug = false;
+    protected bool $additional_parameter_show_for_list = false;
+
+    protected bool $additional_parameter_show_for_single = false;
 
     public $implement = [
         \Backend\Behaviors\FormController::class,
@@ -21,7 +24,8 @@ class PostController extends Controller
 
     public function __construct()
     {
-        $this->debug = config('app.debug');
+        $this->additional_parameter_show_for_list   = (boolean) BlogSettings::instance()->additional_parameter_show_for_posts_list;
+        $this->additional_parameter_show_for_single = (boolean) BlogSettings::instance()->additional_parameter_show_for_single_post;
 
         parent::__construct();
 
@@ -42,9 +46,9 @@ class PostController extends Controller
             ->additional(
                 $data->isEmpty()
                     ?
-                    Additional::warning($this->debug)
+                    Additional::warning($this->additional_parameter_show_for_list)
                     :
-                    Additional::success($this->debug, null, 'statuses.synced')
+                    Additional::success($this->additional_parameter_show_for_list, null, 'statuses.synced')
             );
     }
 
@@ -57,9 +61,9 @@ class PostController extends Controller
 
         if ($data) {
             return PostResource::make($data)
-                ->additional(Additional::success($this->debug, null, 'statuses.synced'));
+                ->additional(Additional::success($this->additional_parameter_show_for_single, null, 'statuses.synced'));
         }
 
-        return Additional::error($this->debug);
+        return Additional::error($this->additional_parameter_show_for_single);
     }
 }

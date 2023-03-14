@@ -56,7 +56,9 @@ return [
     ],
 
     'settings' => [
-        'additional_parameter_show_for_list'   => 'Returned additional parameter "show" for list',
-        'additional_parameter_show_for_single' => 'Returned additional parameter "show" for single',
+        'additional_parameter_show_for_category_list'   => 'Returned additional parameter "show" for category list',
+        'additional_parameter_show_for_single_category' => 'Returned additional parameter "show" for single category',
+        'additional_parameter_show_for_posts_list'      => 'Returned additional parameter "show" for posts list',
+        'additional_parameter_show_for_single_post'     => 'Returned additional parameter "show" for single post',
     ],
 ];

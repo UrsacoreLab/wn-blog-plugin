@@ -3,10 +3,18 @@
 # ===================================
 
 fields:
-    additional_parameter_show_for_list:
-        label: ursacorelab.blog::lang.settings.additional_parameter_show_for_list
+    additional_parameter_show_for_category_list:
+        label: ursacorelab.blog::lang.settings.additional_parameter_show_for_category_list
         type: switch
 
-    additional_parameter_show_for_single:
-        label: ursacorelab.blog::lang.settings.additional_parameter_show_for_single
+    additional_parameter_show_for_single_category:
+        label: ursacorelab.blog::lang.settings.additional_parameter_show_for_single_category
+        type: switch
+
+    additional_parameter_show_for_posts_list:
+        label: ursacorelab.blog::lang.settings.additional_parameter_show_for_posts_list
+        type: switch
+
+    additional_parameter_show_for_single_post:
+        label: ursacorelab.blog::lang.settings.additional_parameter_show_for_single_post
         type: switch

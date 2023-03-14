@@ -24,8 +24,8 @@ class CategoryController extends Controller
 
     public function __construct()
     {
-        $this->additional_parameter_show_for_list   = (boolean) BlogSettings::instance()->additional_parameter_show_for_list;
-        $this->additional_parameter_show_for_single = (boolean) BlogSettings::instance()->additional_parameter_show_for_single;
+        $this->additional_parameter_show_for_list   = (boolean) BlogSettings::instance()->additional_parameter_show_for_category_list;
+        $this->additional_parameter_show_for_single = (boolean) BlogSettings::instance()->additional_parameter_show_for_single_category;
 
         parent::__construct();
 

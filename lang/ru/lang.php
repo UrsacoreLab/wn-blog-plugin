@@ -56,7 +56,9 @@ return [
     ],
 
     'settings' => [
-        'additional_parameter_show_for_list'   => 'Возвращаемый дополнительный параметр "show" для списка',
-        'additional_parameter_show_for_single' => 'Возвращаемый дополнительный параметр "show" для указанного',
+        'additional_parameter_show_for_category_list'   => 'Возвращаемый дополнительный параметр "show" для списка категорий',
+        'additional_parameter_show_for_single_category' => 'Возвращаемый дополнительный параметр "show" для указанной категории',
+        'additional_parameter_show_for_posts_list'      => 'Возвращаемый дополнительный параметр "show" для списка постов',
+        'additional_parameter_show_for_single_post'     => 'Возвращаемый дополнительный параметр "show" для указанного поста',
     ],
 ];
